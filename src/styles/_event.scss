@@ -1,0 +1,69 @@
+@use 'variaveis';
+
+
+.event {
+    padding: 80px 0;
+    
+    &--bebidas {
+        background-image: linear-gradient(variaveis.$LightSkyBlue, variaveis.$blue);
+    }
+
+    &--doces {
+        background-image: linear-gradient(variaveis.$blue, variaveis.$RoyalBlue);
+    }
+
+    &--piscina {
+        background-image: linear-gradient(variaveis.$RoyalBlue, variaveis.$SteelBlue);
+    }
+
+    &--rock {
+        background-image: linear-gradient(variaveis.$SteelBlue, variaveis.$LightSlateGray);
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap:40px;
+       
+    }
+
+    &__image {
+        max-width: 360px;
+    }
+
+    &__detail {
+        color: variaveis.$textColor;
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            line-height: 22px;
+        }
+
+        
+    }
+
+    @media (max-width:640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__detail {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+
+}
